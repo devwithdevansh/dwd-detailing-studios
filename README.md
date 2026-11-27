@@ -1,52 +1,50 @@
-# Kohinoor - Premium Automotive Detailing
+# 🚗 DWD Detailing Studios
 
-A luxury, dark-themed React application designed for high-end automotive detailing, ceramic coating, and paint protection film (PPF) services.
+A unified multi-brand automotive detailing showcase & design system, featuring **Kohinoor**, **Boond**, **Kavach**, and the interactive **Studio Catalog & Design Lab**.
 
-## Key Features
-- **Luxury Aesthetic:** High contrast dark-mode design tailored for premium automotive brands.
-- **Interactive UI:** Smooth reveal animations, custom cursor implementations, and interactive service configurators.
-- **Scroll Effects:** Implemented using Lenis for butter-smooth scrolling and parallax image reveals.
-- **Responsive Design:** Fully mobile-optimized layouts that maintain the premium feel on small devices.
+🌐 **Live:** [car-detailing-by-dwd.onrender.com](https://car-detailing-by-dwd.onrender.com/)
 
-## Tech Stack
-- React + Vite
-- TailwindCSS (Custom configuration for luxury branding)
-- GSAP & Lenis
+---
 
-## Setup
+## ✨ Included Sites & Routes
+
+| Brand / Page | Route | Description |
+| :--- | :--- | :--- |
+| **Kohinoor** | `/` | Dark luxury detailing flagship with brass accents, heat-map gradient, and build configurator. |
+| **Boond** | `/boond/` | Light editorial wash studio with scroll-driven squeegee interaction. |
+| **Kavach** | `/kavach/` | Multi-studio ceramic & PPF network with interactive Leaflet studio locator. |
+| **Catalog** | `/catalog/` | Overview of all studio design systems, palettes, and typography. |
+
+---
+
+## 🎨 Built-in Theme & Font Modifier
+
+Every page includes a floating **Modify [DEV]** button in the top-right corner (shortcut: `Alt + M`):
+- Switch color palettes & typography pairings in real time.
+- Customize individual colors and Google Fonts.
+- Export generated CSS tokens with one click.
+- Append `?nomod=1` to any URL to hide the button for clean client previews.
+
+---
+
+## 🚀 Local Development
+
 ```bash
+# Install dependencies
 npm install
+
+# Start dev server
 npm run dev
+
+# Build for production
+npm run build
 ```
 
-## Studio catalog, and every other studio site, live here too
+---
 
-`#/catalog` is a full menu of every car-detailing studio site in this
-portfolio — palette, type and theme for each — linked from the nav and the
-footer. Its cards don't point at external URLs: **Boond and Kavach are
-ported into this project in full** (`src/sites/boond`, `src/sites/kavach`,
-each with their own components, content and a scoped stylesheet) and opened
-at `#/boond` / `#/kavach`, so the whole portfolio ships as one deployment
-with no separate hosting to keep track of.
+## ☁️ Deployment (Render)
 
-The catalog page also has its own light/dark theme toggle, independent of
-the rest of the site, and a "Build a theme" Design Lab section with ready
-palette presets, a live custom color picker, and several typography
-pairings to preview — all client-side, no build step needed to try a
-combination.
-
-Routing is a plain `window.location.hash` check in `App.jsx` — no
-react-router, no server rewrite rule needed on whatever static host serves
-this site. Each ported site's own CSS custom properties and classes
-(`--ink`, `.btn`, `.eyebrow`, ...) are scoped under a wrapper class
-(`.boond-scope`, `.kavach-scope`) so they can't collide with Kohinoor's
-own tokens or with each other, even though several of those names are
-reused across all three sites with different values.
-
-To add a fourth site the same way: copy its `src/components/` and
-`content.js` into a new `src/sites/<name>/`, scope its `index.css` under
-`.{name}-scope` the same way, add a `<Name>Page.jsx` (see `BoondPage.jsx`
-for the pattern — its own Lenis setup, and killing `ScrollTrigger.getAll()`
-on unmount so a leftover pin from one page can't misplace scroll on the
-next), then add the route to `ROUTES` in `App.jsx` and an entry to
-`src/data/catalogSites.js`.
+Configured via [`render.yaml`](./render.yaml) as a static site:
+- **Build Command:** `npm install && npm run build`
+- **Publish Directory:** `dist`
+- **Root Directory:** *(leave blank)*
