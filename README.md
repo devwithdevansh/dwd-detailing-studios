@@ -1,4 +1,4 @@
-# 🚗 DWD Detailing Studios
+# 🚗 DWD Detailing Studios — Orbitvale
 
 A unified multi-brand automotive detailing showcase & design system, featuring **Kohinoor**, **Boond**, **Kavach**, and the interactive **Studio Catalog & Design Lab**.
 

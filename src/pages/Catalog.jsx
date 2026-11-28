@@ -5,7 +5,7 @@ import CatalogCard from '../components/CatalogCard';
 import ThemeLab from '../components/ThemeLab';
 import PitchCTA from '../components/PitchCTA';
 import SeoPitch from '../components/SeoPitch';
-import dwdLogo from '../assets/dwd-logo.png';
+import orbitvale from '../assets/orbitvale-logo.jpg';
 import './catalog.css';
 
 const STATS = [
@@ -42,10 +42,10 @@ export default function Catalog() {
         <div className="max-w-[var(--container)] mx-auto">
           <section className="pt-[clamp(40px,7vw,72px)] pb-[clamp(32px,5vw,48px)]">
             <div className="dwd-badge">
-              <img src={dwdLogo} alt="DWD" className="dwd-badge-logo" />
+              <img src={orbitvale} alt="Orbitvale" className="dwd-badge-logo" />
               <div className="dwd-badge-text">
                 <span className="dwd-badge-eyebrow">Crafted by</span>
-                <span className="dwd-badge-name">DWD Studio</span>
+                <span className="dwd-badge-name">Orbitvale</span>
               </div>
             </div>
 
