@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="flex flex-wrap items-center justify-between gap-4 text-[14px] text-[var(--paper-dim)]">
         <a className="link" href={`mailto:${EMAIL}`}>{EMAIL}</a>
         <a className="link" href={INSTAGRAM} target="_blank" rel="noreferrer">Instagram</a>
-        <span className="opacity-60">© {new Date().getFullYear()} {BRAND}. Site by DevWithDevansh.</span>
+        <span className="opacity-60">© {new Date().getFullYear()} {BRAND}. Site by Orbitvale.</span>
       </div>
       <p className="display m-0 mt-12 leading-[.8] text-[clamp(52px,15vw,260px)] tracking-[-0.03em] whitespace-nowrap overflow-hidden text-[var(--paper)]" aria-hidden="true">{BRAND}</p>
     </footer>
